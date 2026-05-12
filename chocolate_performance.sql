@@ -33,10 +33,10 @@ all_aggre as (SELECT
  )
 --main query 
 --Overall Scall 
-SELECT 
-SUM(total_sales) Sales,
-	 SUM(quantity) quantity
-	FROM all_aggre
+--SELECT 
+--SUM(total_sales) Sales,
+	 --SUM(quantity) quantity
+	--FROM all_aggre
 -- 99 = 251651.47
 --Which loctations are driving the most volume
 
@@ -46,7 +46,7 @@ SELECT
 	customer_id,
 	unique_orders,
 	cus_order,
-	(spend/unique_orders) cu_spends,
+	round((spend/unique_orders),2) cu_spends,
 	spend
 
 FROM(SELECT 

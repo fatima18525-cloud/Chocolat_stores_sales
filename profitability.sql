@@ -44,4 +44,4 @@ FROM(SELECT
 	cost,
 	profit
 FROM chocolate_database)F
-WHERE dicount like '15%'
+ORDER BY revenue
